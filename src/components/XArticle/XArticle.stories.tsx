@@ -28,6 +28,8 @@ export const Default: Story = {
         <li>Third list item</li>
       </ul>
 
+      <p>Some more text continuing after the list items. But now here's something else;</p>
+
       <blockquote>
         This is a blockquote. It's styled with a left border and italic text.
       </blockquote>
