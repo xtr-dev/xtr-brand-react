@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&display=swap');
+
+:root {
+    --font-body: 'Cantarell', sans-serif;
+
+    --color-black: #000000;
+    --color-body: #252525;
+    --color-white: #fff;
+    --color-pastel-yellow: #fdf4b8;
+    --color-pastel-green: #afefb0;
+    --color-pastel-red: #ffd7d6;
+    --color-pastel-blue: #beebf8;
+
+    --theme-fg: var(--color-body);
+    --theme-bg: var(--color-white);
+}
+
+[data-theme="light"] {
+    --theme-fg: var(--color-body);
+    --theme-bg: var(--color-white);
+}
+
+[data-theme="dark"] {
+    --theme-fg: var(--color-white);
+    --theme-bg: var(--color-body);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --theme-fg: var(--color-white);
+        --theme-bg: var(--color-body);
+    }
+}
+
+.theme {
+    font-family: var(--font-body), sans-serif;
+    color: var(--theme-fg);
+    background-color: var(--theme-bg);
+}
+
+.padding {
+    padding: 1rem;
+}
+
+.margin {
+    margin: 1rem;
+}

@@ -1,0 +1,52 @@
+@import './theme.css';
+
+.button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+.button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.button:not(:disabled):hover {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.0);
+    transform: translateY(1px);
+}
+
+.button.black {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.button.body {
+    background: var(--color-body);
+    color: var(--color-white);
+}
+
+.button.white {
+    background: var(--color-white);
+}
+
+.button.pastel-yellow {
+    background: var(--color-pastel-yellow);
+}
+
+.button.pastel-green {
+    background: var(--color-pastel-green);
+}
+
+.button.pastel-red {
+    background: var(--color-pastel-red);
+}
+
+.button.pastel-blue {
+    background: var(--color-pastel-blue);
+}

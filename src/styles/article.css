@@ -1,0 +1,38 @@
+@import './theme.css';
+
+.article {
+    line-height: 1;
+}
+
+.article p {
+    margin: 0 0 1rem;
+}
+
+.article h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.article h1 {
+    font-size: 3rem;
+    padding: 0.5rem 0;
+}
+
+.article h2 {
+    font-size: 2rem;
+    padding: 0.5rem 0;
+}
+
+.article h3 {
+    font-size: 1.5rem;
+    line-height: 1.333333;
+}
+
+.article h4, h5, h6 {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+
+.article ul, ol, li {
+    margin: 0;
+}

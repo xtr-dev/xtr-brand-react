@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="110" height="30">
+<path d="M0 0 C9.9 0 19.8 0 30 0 C30 3.3 30 6.6 30 10 C23.4 10 16.8 10 10 10 C10 16.6 10 23.2 10 30 C6.7 30 3.4 30 0 30 C0 20.1 0 10.2 0 0 Z " fill="#FFFFFF" transform="translate(80,0)"/>
+<path d="M0 0 C9.9 0 19.8 0 30 0 C30 3.3 30 6.6 30 10 C26.7 10 23.4 10 20 10 C20 16.6 20 23.2 20 30 C16.7 30 13.4 30 10 30 C10 23.4 10 16.8 10 10 C6.7 10 3.4 10 0 10 C0 6.7 0 3.4 0 0 Z " fill="#FFFFFF" transform="translate(40,0)"/>
+<path d="M0 0 C3.3 0 6.6 0 10 0 C10 3.3 10 6.6 10 10 C6.7 10 3.4 10 0 10 C0 6.7 0 3.4 0 0 Z " fill="#FFFFFF" transform="translate(20,20)"/>
+<path d="M0 0 C3.3 0 6.6 0 10 0 C10 3.3 10 6.6 10 10 C6.7 10 3.4 10 0 10 C0 6.7 0 3.4 0 0 Z " fill="#FFFFFF" transform="translate(0,20)"/>
+<path d="M0 0 C3.3 0 6.6 0 10 0 C10 3.3 10 6.6 10 10 C6.7 10 3.4 10 0 10 C0 6.7 0 3.4 0 0 Z " fill="#FFFFFF" transform="translate(10,10)"/>
+<path d="M0 0 C3.3 0 6.6 0 10 0 C10 3.3 10 6.6 10 10 C6.7 10 3.4 10 0 10 C0 6.7 0 3.4 0 0 Z " fill="#FFFFFF" transform="translate(20,0)"/>
+<path d="M0 0 C3.3 0 6.6 0 10 0 C10 3.3 10 6.6 10 10 C6.7 10 3.4 10 0 10 C0 6.7 0 3.4 0 0 Z " fill="#FFFFFF" transform="translate(0,0)"/>
+</svg>
