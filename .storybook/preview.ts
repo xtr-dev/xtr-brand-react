@@ -18,6 +18,9 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    (Story) => React.createElement('div', { className: 'theme' }, React.createElement(Story)),
+  ],
 };
 
 export default preview;

@@ -1,9 +1,12 @@
 @import './theme.css';
 
 .button {
+    appearance: none;
     cursor: pointer;
-    padding: 0.5rem 1rem;
-    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0.5rem;
+    font-weight: 400;
     border: none;
     border-radius: 3px;
     transition: all 0.1s ease-in-out;
@@ -19,11 +22,6 @@
 .button:not(:disabled):hover {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.0);
     transform: translateY(1px);
-}
-
-.button.black {
-    background: var(--color-black);
-    color: var(--color-white);
 }
 
 .button.body {

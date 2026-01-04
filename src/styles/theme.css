@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&family=Geist:wght@400;500;600;700&display=swap');
 
 :root {
     --font-body: 'Cantarell', sans-serif;
+    --font-header: 'Geist', sans-serif;
 
     --color-black: #000000;
     --color-body: #252525;
@@ -35,6 +36,9 @@
 .theme {
     font-family: var(--font-body), sans-serif;
     color: var(--theme-fg);
+}
+
+.theme.background {
     background-color: var(--theme-bg);
 }
 
@@ -44,4 +48,12 @@
 
 .margin {
     margin: 1rem;
+}
+
+.margin-before {
+    margin-top: 1rem;
+}
+
+.margin-after {
+    margin-bottom: 1rem;
 }

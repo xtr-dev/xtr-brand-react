@@ -10,3 +10,5 @@ export { XArticle } from './components/XArticle';
 export type { XArticleProps } from './components/XArticle';
 export { XRem } from './components/XRem';
 export type { XRemProps } from './components/XRem';
+export { XCode } from './components/XCode';
+export type { XCodeProps } from './components/XCode';
