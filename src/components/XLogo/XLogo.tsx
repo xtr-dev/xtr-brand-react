@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState, CSSProperties } from 'react';
 
 export interface XLogoProps {
