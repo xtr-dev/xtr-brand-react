@@ -1,5 +1,5 @@
 {
-  "name": "xtr-brand-react",
+  "name": "@xtr-dev/xtr-brand-react",
   "version": "1.0.0",
   "description": "xtr.dev branded React components and utilities",
   "main": "dist/index.js",
