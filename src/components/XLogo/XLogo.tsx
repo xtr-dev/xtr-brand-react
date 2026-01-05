@@ -61,10 +61,17 @@ export function XLogo({
 
   // margin: true/1 = 1 logo pixel (10px), 0.5 = 5px, etc.
   const marginSize = typeof margin === 'number' ? margin * MARGIN : (margin ? MARGIN : 0);
-  const padding = (PADDING + marginSize) * scale;
-  const fullWidth = (SVG_WIDTH + PADDING * 2 + marginSize * 2) * scale;
-  const collapsedWidth = (X_WIDTH + PADDING * 2 + marginSize * 2) * scale;
-  const height = (SVG_HEIGHT + PADDING * 2 + marginSize * 2) * scale;
+
+  // Round SVG dimensions first, then derive container size to ensure alignment
+  const svgWidth = Math.round(SVG_WIDTH * scale);
+  const svgHeight = Math.round(SVG_HEIGHT * scale);
+  const xWidth = Math.round(X_WIDTH * scale);
+  const padding = Math.round((PADDING + marginSize) * scale);
+
+  // Container dimensions = content + padding (ensures clip fits exactly)
+  const fullWidth = svgWidth + padding * 2;
+  const collapsedWidth = xWidth + padding * 2;
+  const height = svgHeight + padding * 2;
 
   const outerWidth = stableWidth ? fullWidth : (isCollapsed ? collapsedWidth : fullWidth);
 
@@ -80,7 +87,7 @@ export function XLogo({
     ...style,
   };
 
-  const clipWidth = isCollapsed ? X_WIDTH * scale : SVG_WIDTH * scale;
+  const clipWidth = isCollapsed ? xWidth : svgWidth;
 
   const clipStyle: CSSProperties = {
     width: clipWidth,
@@ -102,8 +109,8 @@ export function XLogo({
       <div style={clipStyle}>
         <svg
           viewBox={`0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`}
-          width={SVG_WIDTH * scale}
-          height={SVG_HEIGHT * scale}
+          width={svgWidth}
+          height={svgHeight}
           style={svgStyle}
         >
         {/* R */}
