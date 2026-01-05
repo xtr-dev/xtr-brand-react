@@ -62,15 +62,16 @@ export function XLogo({
   // margin: true/1 = 1 logo pixel (10px), 0.5 = 5px, etc.
   const marginSize = typeof margin === 'number' ? margin * MARGIN : (margin ? MARGIN : 0);
 
-  // Round SVG dimensions first, then derive container size to ensure alignment
+  // Round SVG dimensions - use same value for X width since X is square (30x30) like SVG height
   const svgWidth = Math.round(SVG_WIDTH * scale);
   const svgHeight = Math.round(SVG_HEIGHT * scale);
-  const xWidth = Math.round(X_WIDTH * scale);
+  // X is 30x30 in viewBox, same as SVG_HEIGHT, so use svgHeight to ensure perfect square when collapsed
+  const xWidth = svgHeight;
   const padding = Math.round((PADDING + marginSize) * scale);
 
-  // Container dimensions = content + padding (ensures clip fits exactly)
+  // Container dimensions - collapsedWidth uses xWidth (== svgHeight) for perfect square
   const fullWidth = svgWidth + padding * 2;
-  const collapsedWidth = xWidth + padding * 2;
+  const collapsedWidth = xWidth + padding * 2; // == height, guaranteed square
   const height = svgHeight + padding * 2;
 
   const outerWidth = stableWidth ? fullWidth : (isCollapsed ? collapsedWidth : fullWidth);
