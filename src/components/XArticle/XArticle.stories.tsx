@@ -13,7 +13,7 @@ type Story = StoryObj<typeof XArticle>;
 
 export const Default: Story = {
     render: () => (
-        <XArticle className={'theme  padding'}>
+        <XArticle className={'theme background padding'}>
             <h1>Article Title</h1>
             <p>This is the lead paragraph with some introductory text. It demonstrates the base font size and line
                 height.</p>
@@ -32,10 +32,11 @@ export const Default: Story = {
                 <li>Third list item</li>
             </ul>
 
-            {/*<XFlex horizontal={true} gap={'0.5rem'} className={'margin-after'}>*/}
-            {/*    <XButton variant={'pastel-blue'}>Click here</XButton>*/}
-            {/*    <XButton variant={'pastel-green'}>Click here</XButton>*/}
-            {/*</XFlex>*/}
+            <XFlex horizontal={true} gap={'0.5rem'} className={'margin-after'}>
+                <XButton variant={'body'}>Click here</XButton>
+                <XButton variant={'pastel-yellow'}>Click here</XButton>
+                <XButton variant={'pastel-green'}>Click here</XButton>
+            </XFlex>
 
             <p>Some more text continuing after the list items. But now here's something else;</p>
 

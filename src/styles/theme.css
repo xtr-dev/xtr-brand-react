@@ -5,8 +5,8 @@
     --font-header: 'Geist', sans-serif;
 
     --color-black: #000000;
-    --color-body: #252525;
-    --color-white: #fff;
+    --color-body: #333333;
+    --color-white: #ffffff;
     --color-pastel-yellow: #fdf4b8;
     --color-pastel-green: #afefb0;
     --color-pastel-red: #ffd7d6;
@@ -14,6 +14,11 @@
 
     --theme-fg: var(--color-body);
     --theme-bg: var(--color-white);
+
+    --theme-fg-half: color-mix(in srgb, var(--theme-fg) 50%, transparent);
+    --theme-fg-ghost: color-mix(in srgb, var(--theme-fg) 10%, transparent);
+    --theme-bg-half: color-mix(in srgb, var(--theme-bg) 50%, transparent);
+    --theme-bg-ghost: color-mix(in srgb, var(--theme-bg) 10%, transparent);
 }
 
 [data-theme="light"] {

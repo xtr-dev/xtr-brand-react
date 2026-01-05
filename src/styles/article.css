@@ -5,8 +5,12 @@
 }
 
 .article p {
-    margin: 0 0 1rem 0;
+    margin: 0;
     min-height: 2rem;
+}
+
+.article p + :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: 1rem;
 }
 
 .article h1,
@@ -18,24 +22,22 @@
     margin: 0;
     font-family: var(--font-header), sans-serif;
     font-size: 1rem;
-    line-height: 1;
+    padding: 0.25rem 0;
 }
 
 .article h1 {
     font-size: 3rem;
+    padding: 0.25rem 0;
 }
 
 .article h2 {
     font-size: 2rem;
+    padding: 0.5rem 0;
 }
 
 .article h3 {
     font-size: 1.5rem;
-    line-height: 1.333;
-}
-
-.article h4, h5, h6 {
-    padding: 0.5rem 0;
+    padding: 0.375rem 0;
 }
 
 .article ul, .article ol {
@@ -50,39 +52,30 @@
 }
 
 .article blockquote {
-    box-sizing: border-box;
     margin: 0 0 1rem;
-    padding: 0 0.5rem;
-    min-height: 2rem;
-    border-left: 3px solid var(--theme-fg);
+    padding: 0.25rem 1rem;
+    box-shadow: inset 3px 0 0 var(--theme-fg-half);
     font-style: italic;
 }
 
 .article pre {
-    margin: 0 0 1rem;
-    padding: 0.5rem 1rem;
-    line-height: 1.5;
+    font-family: 'SF Mono', 'Consolas', monospace;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    border-radius: 3px;
+    overflow-x: auto;
     background: var(--color-body);
     color: var(--color-white);
-    border-radius: 4px;
-    overflow-x: auto;
-}
-
-.article pre code {
-    font-family: 'SF Mono', 'Consolas', monospace;
-    font-size: 0.875rem;
 }
 
 .article code {
-    padding: 0.125rem 0.375rem;
-    font-family: 'SF Mono', 'Consolas', monospace;
-    font-size: 0.875em;
-    background: rgba(0, 0, 0, 0.06);
+    font-size: 0.875rem;
     border-radius: 3px;
 }
 
 .article pre code {
     padding: 0;
+    font-size: 1rem;
     background: none;
     border-radius: 0;
 }
