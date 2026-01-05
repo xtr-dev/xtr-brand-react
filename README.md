@@ -1,11 +1,11 @@
-# xtr-brand-react
+# @xtr-dev/xtr-brand-react
 
 React components and utilities for xtr.dev branding.
 
 ## Installation
 
 ```bash
-npm install xtr-brand-react
+npm install @xtr-dev/xtr-brand-react
 ```
 
 ## Components
@@ -15,12 +15,13 @@ npm install xtr-brand-react
 Animated XTR logo that collapses from full "XTR" text to just the "X" icon.
 
 ```tsx
-import { XLogo } from 'xtr-brand-react';
+import { XLogo } from '@xtr-dev/xtr-brand-react';
 
 <XLogo />
+<XLogo scale={2} delay={1000} />
+<XLogo reveal={false} />
+<XLogo revealOnHover />
 ```
-
-#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -31,48 +32,185 @@ import { XLogo } from 'xtr-brand-react';
 | `stableWidth` | `boolean` | `false` | Keep full width, only clip content |
 | `reveal` | `boolean` | `undefined` | Override reveal state (`true` = full, `false` = X only) |
 | `revealOnHover` | `boolean` | `false` | Reveal full logo on hover |
-| `className` | `string` | - | CSS class name |
-| `style` | `CSSProperties` | - | Inline styles |
 
-#### Examples
+### XButton
+
+Styled button with color variants.
 
 ```tsx
-// Basic usage - collapses after 2 seconds
-<XLogo />
+import { XButton } from '@xtr-dev/xtr-brand-react';
 
-// Larger logo with slower animation
-<XLogo scale={3} delay={3000} duration={1000} />
+<XButton>Click me</XButton>
+<XButton variant="pastel-green">Success</XButton>
+<XButton variant="pastel-red" disabled>Disabled</XButton>
+```
 
-// With margin padding
-<XLogo margin />
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `variant` | `'body' \| 'white' \| 'pastel-yellow' \| 'pastel-green' \| 'pastel-red' \| 'pastel-blue'` | `'body'` | Button color variant |
 
-// Stable width (container doesn't shrink)
-<XLogo stableWidth />
+### XFlex
 
-// Hover to reveal
-<XLogo delay={0} revealOnHover />
+Flexbox layout wrapper.
 
-// Controlled state
-<XLogo reveal={isExpanded} />
+```tsx
+import { XFlex } from '@xtr-dev/xtr-brand-react';
 
-// Always show full logo
-<XLogo reveal={true} />
+<XFlex gap="1rem">
+  <div>Item 1</div>
+  <div>Item 2</div>
+</XFlex>
 
-// Always show X only
-<XLogo reveal={false} />
+<XFlex horizontal wrap gap="0.5rem">
+  <div>Horizontal</div>
+  <div>Wrapped</div>
+</XFlex>
+```
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `horizontal` | `boolean` | `false` | Row direction (default is column) |
+| `wrap` | `boolean` | `false` | Enable flex wrap |
+| `gap` | `string` | - | Gap between items |
+| `align` | `string` | - | Align items |
+| `justify` | `string` | - | Justify content |
+| `grow` | `boolean` | `false` | Flex grow to fill container |
+
+### XGrid
+
+CSS Grid layout wrapper.
+
+```tsx
+import { XGrid } from '@xtr-dev/xtr-brand-react';
+
+<XGrid columns={3} gap="1rem">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</XGrid>
+
+<XGrid columns="1fr 2fr 1fr" rowGap="1rem">
+  <div>Narrow</div>
+  <div>Wide</div>
+  <div>Narrow</div>
+</XGrid>
+```
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `columns` | `number \| string` | - | Number of columns or grid-template-columns |
+| `rows` | `number \| string` | - | Number of rows or grid-template-rows |
+| `gap` | `string` | - | Gap between items |
+| `rowGap` | `string` | - | Row gap |
+| `columnGap` | `string` | - | Column gap |
+
+### XArticle
+
+Article wrapper with typography styles and vertical rhythm.
+
+```tsx
+import { XArticle } from '@xtr-dev/xtr-brand-react';
+
+<XArticle className="theme background padding">
+  <h1>Title</h1>
+  <p>Content with proper typography.</p>
+  <ul>
+    <li>List item</li>
+  </ul>
+  <pre><code>code block</code></pre>
+</XArticle>
+```
+
+### XCode
+
+Code block with Prism.js syntax highlighting.
+
+```tsx
+import { XCode } from '@xtr-dev/xtr-brand-react';
+
+<XCode language="typescript" lineNumbers>
+{`function hello(name: string) {
+  return "Hello, " + name;
+}`}
+</XCode>
+
+<p>Use <XCode inline>console.log()</XCode> to debug.</p>
+```
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `language` | `string` | - | Language for syntax highlighting |
+| `inline` | `boolean` | `false` | Display as inline code |
+| `lineNumbers` | `boolean` | `false` | Show line numbers |
+
+Supported languages: typescript, javascript, jsx, tsx, css, json, bash, markdown, python, rust, go
+
+### XRem
+
+Wrapper that snaps element height to rem multiples (for vertical rhythm).
+
+```tsx
+import { XRem } from '@xtr-dev/xtr-brand-react';
+
+<XRem>
+  Content with height snapped to 1rem multiples
+</XRem>
+
+<XRem unit={0.5}>
+  Snaps to 0.5rem multiples
+</XRem>
+```
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `unit` | `number` | `1` | Rem multiple to snap to |
+
+## Theme
+
+Import the theme CSS for fonts and color variables:
+
+```tsx
+import '@xtr-dev/xtr-brand-react/dist/styles/theme.css';
+```
+
+Use the `.theme` class for themed containers:
+
+```tsx
+<div className="theme background padding">
+  Themed content
+</div>
+```
+
+### Dark Mode
+
+Supports system dark mode automatically, or override manually:
+
+```html
+<html data-theme="dark">
+<html data-theme="light">
+```
+
+### CSS Variables
+
+```css
+--font-body: 'Cantarell', sans-serif;
+--font-header: 'Geist', sans-serif;
+--color-body: #333333;
+--color-white: #ffffff;
+--color-pastel-yellow: #fdf4b8;
+--color-pastel-green: #afefb0;
+--color-pastel-red: #ffd7d6;
+--color-pastel-blue: #beebf8;
+--theme-fg: current foreground color;
+--theme-bg: current background color;
 ```
 
 ## Development
 
 ```bash
-# Install dependencies
 npm install
-
-# Build library
-npm run build
-
-# Run Storybook
-npm run storybook
+npm run storybook    # Run Storybook
+npm run build        # Build library
 ```
 
 ## License
