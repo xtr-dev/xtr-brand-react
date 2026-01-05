@@ -38,27 +38,27 @@
     }
 }
 
-.theme {
+.xtr-theme {
     font-family: var(--font-body), sans-serif;
     color: var(--theme-fg);
 }
 
-.theme.background {
+.xtr-theme.xtr-background {
     background-color: var(--theme-bg);
 }
 
-.padding {
+.xtr-padding {
     padding: 1rem;
 }
 
-.margin {
+.xtr-margin {
     margin: 1rem;
 }
 
-.margin-before {
+.xtr-margin-before {
     margin-top: 1rem;
 }
 
-.margin-after {
+.xtr-margin-after {
     margin-bottom: 1rem;
 }

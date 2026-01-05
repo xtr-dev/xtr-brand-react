@@ -7,7 +7,7 @@ export interface XArticleProps extends HTMLAttributes<HTMLElement> {}
 export const XArticle = forwardRef<HTMLElement, XArticleProps>(
   ({ children, className, ...props }, ref) => {
     return (
-      <article ref={ref} className={`article ${className ?? ''}`} {...props}>
+      <article ref={ref} className={`xtr-article ${className ?? ''}`} {...props}>
         {children}
       </article>
     );

@@ -39,7 +39,7 @@ export const XCode = forwardRef<HTMLElement, XCodeProps>(
 
     if (inline) {
       return (
-        <code ref={ref} className={`code code-inline ${className ?? ''}`} {...props}>
+        <code ref={ref} className={`xtr-code xtr-code-inline ${className ?? ''}`} {...props}>
           {children}
         </code>
       );
@@ -53,7 +53,7 @@ export const XCode = forwardRef<HTMLElement, XCodeProps>(
       return (
         <XRem
           ref={ref as React.Ref<HTMLDivElement>}
-          className={`code code-block code-line-numbers ${className ?? ''}`}
+          className={`xtr-code xtr-code-block xtr-code-line-numbers ${className ?? ''}`}
           data-language={language}
           {...props}
         >
@@ -61,7 +61,7 @@ export const XCode = forwardRef<HTMLElement, XCodeProps>(
             {lines.map((line, i) => (
               <span
                 key={i}
-                className="code-line"
+                className="xtr-code-line"
                 data-line-number={i + 1}
                 {...(highlightedCode
                   ? { dangerouslySetInnerHTML: { __html: line + (i < lines.length - 1 ? '\n' : '') } }
@@ -77,7 +77,7 @@ export const XCode = forwardRef<HTMLElement, XCodeProps>(
     return (
       <XRem
         ref={ref as React.Ref<HTMLDivElement>}
-        className={`code code-block ${className ?? ''}`}
+        className={`xtr-code xtr-code-block ${className ?? ''}`}
         data-language={language}
         {...props}
       >

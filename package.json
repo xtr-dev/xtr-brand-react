@@ -9,7 +9,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && pnpm copyfiles",
+    "copyfiles": "copyfiles -u 1 \"src/**/*.css\" dist/",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -28,6 +29,7 @@
     "@types/react-dom": "^18.2.0",
     "@vitest/browser-playwright": "^4.0.16",
     "@vitest/coverage-v8": "^4.0.16",
+    "copyfiles": "^2.4.1",
     "playwright": "^1.57.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

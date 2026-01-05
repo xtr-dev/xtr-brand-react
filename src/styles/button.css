@@ -1,6 +1,6 @@
 @import './theme.css';
 
-.button {
+.xtr-button {
     appearance: none;
     cursor: pointer;
     font-size: 1rem;
@@ -14,36 +14,36 @@
     box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1);
 }
 
-.button:disabled {
+.xtr-button:disabled {
     cursor: not-allowed;
     opacity: 0.5;
 }
 
-.button:not(:disabled):hover {
+.xtr-button:not(:disabled):hover {
     box-shadow: inset 0 0px 0 rgba(0, 0, 0, 0.1);
 }
 
-.button.body {
+.xtr-button.xtr-body {
     background: var(--color-body);
     color: var(--color-white);
 }
 
-.button.white {
+.xtr-button.xtr-white {
     background: var(--color-white);
 }
 
-.button.pastel-yellow {
+.xtr-button.xtr-pastel-yellow {
     background: var(--color-pastel-yellow);
 }
 
-.button.pastel-green {
+.xtr-button.xtr-pastel-green {
     background: var(--color-pastel-green);
 }
 
-.button.pastel-red {
+.xtr-button.xtr-pastel-red {
     background: var(--color-pastel-red);
 }
 
-.button.pastel-blue {
+.xtr-button.xtr-pastel-blue {
     background: var(--color-pastel-blue);
 }

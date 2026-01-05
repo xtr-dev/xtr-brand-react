@@ -9,7 +9,7 @@ export interface XButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const XButton = forwardRef<HTMLButtonElement, XButtonProps>(
   ({ children, variant = 'body', ...props }, ref) => {
     return (
-      <button ref={ref} {...props} className={`button ${variant}`}>
+      <button ref={ref} {...props} className={`xtr-button xtr-${variant}`}>
         {children}
       </button>
     );

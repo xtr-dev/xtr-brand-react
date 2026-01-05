@@ -7,8 +7,8 @@ export interface XLogoProps {
   duration?: number;
   /** Scale factor for the logo size (default: 1) */
   scale?: number;
-  /** Add margin around the logo (1/3 height = 10px in logo space) */
-  margin?: boolean;
+  /** Add margin around the logo. true/1 = 1 logo pixel (10px), 0.5 = half logo pixel, etc. */
+  margin?: boolean | number;
   /** Keep width stable at full logo width instead of shrinking */
   stableWidth?: boolean;
   /** Override reveal state (true = full logo, false = X only, undefined = auto) */
@@ -59,7 +59,8 @@ export function XLogo({
         : !autoCollapsed;
   const isCollapsed = !isRevealed;
 
-  const marginSize = margin ? MARGIN : 0;
+  // margin: true/1 = 1 logo pixel (10px), 0.5 = 5px, etc.
+  const marginSize = typeof margin === 'number' ? margin * MARGIN : (margin ? MARGIN : 0);
   const padding = (PADDING + marginSize) * scale;
   const fullWidth = (SVG_WIDTH + PADDING * 2 + marginSize * 2) * scale;
   const collapsedWidth = (X_WIDTH + PADDING * 2 + marginSize * 2) * scale;

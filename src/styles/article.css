@@ -1,46 +1,46 @@
 @import './theme.css';
 
-.article {
+.xtr-article {
     line-height: 1.5;
 }
 
-.article p {
+.xtr-article p {
     margin: 0;
     min-height: 2rem;
 }
 
-.article p + :is(h1, h2, h3, h4, h5, h6) {
+.xtr-article p + :is(h1, h2, h3, h4, h5, h6) {
     margin-top: 1rem;
 }
 
-.article h1,
-.article h2,
-.article h3,
-.article h4,
-.article h5,
-.article h6 {
+.xtr-article h1,
+.xtr-article h2,
+.xtr-article h3,
+.xtr-article h4,
+.xtr-article h5,
+.xtr-article h6 {
     margin: 0;
     font-family: var(--font-header), sans-serif;
     font-size: 1rem;
     padding: 0.25rem 0;
 }
 
-.article h1 {
+.xtr-article h1 {
     font-size: 3rem;
     padding: 0.25rem 0;
 }
 
-.article h2 {
+.xtr-article h2 {
     font-size: 2rem;
     padding: 0.5rem 0;
 }
 
-.article h3 {
+.xtr-article h3 {
     font-size: 1.5rem;
     padding: 0.375rem 0;
 }
 
-.article ul, .article ol {
+.xtr-article ul, .xtr-article ol {
     display: inline-block;
     margin: 0;
     overflow: hidden;
@@ -48,17 +48,17 @@
     padding: 0 0 0 calc(2rem - 4px);
 }
 
-.article li {
+.xtr-article li {
 }
 
-.article blockquote {
+.xtr-article blockquote {
     margin: 0 0 1rem;
     padding: 0.25rem 1rem;
     box-shadow: inset 3px 0 0 var(--theme-fg-half);
     font-style: italic;
 }
 
-.article pre {
+.xtr-article pre {
     font-family: 'SF Mono', 'Consolas', monospace;
     margin: 0;
     padding: 0.75rem 1rem;
@@ -68,19 +68,19 @@
     color: var(--color-white);
 }
 
-.article code {
+.xtr-article code {
     font-size: 0.875rem;
     border-radius: 3px;
 }
 
-.article pre code {
+.xtr-article pre code {
     padding: 0;
     font-size: 1rem;
     background: none;
     border-radius: 0;
 }
 
-.article hr {
+.xtr-article hr {
     height: 1rem;
     margin: 1rem 0 0 0;
     border: none;
